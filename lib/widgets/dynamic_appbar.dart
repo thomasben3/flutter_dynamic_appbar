@@ -10,14 +10,16 @@ class _DynamicAppBar extends StatelessWidget {
     required this.leftButton,
     required this.rightButton,
     required this.appBarHeight,
-    required this.appBarColor
+    required this.appBarColor,
+    required this.appBarShadows
   });
 
-  final Widget? title;
-  final Widget? leftButton;
-  final Widget? rightButton;
-  final double  appBarHeight;
-  final Color?  appBarColor;
+  final Widget?           title;
+  final Widget?           leftButton;
+  final Widget?           rightButton;
+  final double            appBarHeight;
+  final Color?            appBarColor;
+  final List<BoxShadow>?  appBarShadows;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +35,10 @@ class _DynamicAppBar extends StatelessWidget {
           left: MediaQuery.of(context).padding.left,
           right: MediaQuery.of(context).padding.right
         ),
-        color: appBarColor,
+        decoration: BoxDecoration(
+          color: appBarColor,
+          boxShadow: appBarShadows
+        ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
