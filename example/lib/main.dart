@@ -30,23 +30,14 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: DynamicAppBarView(
-        title: const Text(
-          'Dynamic AppBar',
-          style: TextStyle(color: Colors.white, fontSize: 23)
-        ),
+        title: const Text('Dynamic AppBar',
+            style: TextStyle(color: Colors.white, fontSize: 23)),
         appBarHeight: _appBarHeight,
         appBarColor: Colors.blue,
-        leftButton: const Icon(
-          Icons.star,
-          color: Colors.white
-        ),
+        leftButton: const Icon(Icons.star, color: Colors.white),
         rightButton: IconButton(
-          onPressed: () {/* Triggers function */},
-          icon: const Icon(
-            Icons.menu,
-            color: Colors.white
-          )
-        ),
+            onPressed: () {/* Triggers function */},
+            icon: const Icon(Icons.menu, color: Colors.white)),
         child: ListView.builder(
           padding: const EdgeInsets.only(top: _appBarHeight),
           itemCount: 100,

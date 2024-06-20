@@ -7,6 +7,8 @@ class _DynamicAppBarProvider extends InheritedNotifier<_DynamicAppBarModel> {
       : super(notifier: model);
 
   static _DynamicAppBarModel of(BuildContext context) {
-    return context.dependOnInheritedWidgetOfExactType<_DynamicAppBarProvider>()!.model;
+    return context
+        .dependOnInheritedWidgetOfExactType<_DynamicAppBarProvider>()!
+        .model;
   }
 }

@@ -13,11 +13,11 @@ class _DynamicAppBar extends StatelessWidget {
     required this.appBarColor,
   });
 
-  final Widget?           title;
-  final Widget?           leftButton;
-  final Widget?           rightButton;
-  final double            appBarHeight;
-  final Color?            appBarColor;
+  final Widget? title;
+  final Widget? leftButton;
+  final Widget? rightButton;
+  final double appBarHeight;
+  final Color? appBarColor;
 
   @override
   Widget build(BuildContext context) {
@@ -30,23 +30,15 @@ class _DynamicAppBar extends StatelessWidget {
       curve: Curves.ease,
       child: Container(
         padding: EdgeInsets.only(
-          left: MediaQuery.of(context).padding.left,
-          right: MediaQuery.of(context).padding.right
-        ),
+            left: MediaQuery.of(context).padding.left,
+            right: MediaQuery.of(context).padding.right),
         color: appBarColor,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            SizedBox(
-              width: 50,
-              child: leftButton
-            ),
-            if (title != null)
-              title!,
-            SizedBox(
-              width: 50,
-              child: rightButton
-            )
+            SizedBox(width: 50, child: leftButton),
+            if (title != null) title!,
+            SizedBox(width: 50, child: rightButton)
           ],
         ),
       ),
