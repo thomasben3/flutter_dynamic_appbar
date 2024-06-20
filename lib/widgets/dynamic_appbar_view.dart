@@ -14,11 +14,22 @@ class DynamicAppBarView extends StatelessWidget {
       this.appBarColor = Colors.white,
       required this.child});
 
+  // Title of the appbar, this will be the center widget of the appbar
   final Widget? title;
+
+  // Left button of the appbar, this will be the left widget of the appbar
   final Widget? leftButton;
+
+  // Right button of the appbar, this will be the right widget of the appbar
   final Widget? rightButton;
+
+  // Height of the appbar
   final double appBarHeight;
+
+  // Background color of the appbar
   final Color? appBarColor;
+
+  // Child widget, this will be the view that will be wrapped by the appbar
   final Widget child;
 
   @override
@@ -34,9 +45,11 @@ class DynamicAppBarView extends StatelessWidget {
             child: _DynamicAppBarProvider(
           model: _DynamicAppBarModel(),
           child: Builder(builder: (context) {
+            // Access the _DynamicAppBarModel by the _DynamicAppBarProvider
             final _DynamicAppBarModel model =
                 _DynamicAppBarProvider.of(context);
 
+            // Return the Stack with the child and the _DynamicAppBar
             return Stack(
               children: [
                 Positioned.fill(

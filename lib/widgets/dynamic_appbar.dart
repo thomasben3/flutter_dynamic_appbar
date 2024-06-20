@@ -13,14 +13,25 @@ class _DynamicAppBar extends StatelessWidget {
     required this.appBarColor,
   });
 
+  // Title of the appbar, this will be the center widget of the appbar
   final Widget? title;
+
+  // Left button of the appbar, this will be the left widget of the appbar
   final Widget? leftButton;
+
+  // Right button of the appbar, this will be the right widget of the appbar
   final Widget? rightButton;
+
+  // Height of the appbar
   final double appBarHeight;
+
+  // Background color of the appbar
   final Color? appBarColor;
 
   @override
   Widget build(BuildContext context) {
+    // Return the AnimatedPositioned widget that will animate the appbar when it appears or disappears
+    // The value of top will be 0 if the appbar is visible, and -appBarHeight if it is not, this will make the appbar to appear or disappear
     return AnimatedPositioned(
       top: _DynamicAppBarProvider.of(context).isVisible ? 0 : -appBarHeight,
       left: 0,
