@@ -23,4 +23,4 @@
 
 ### Fixed
 
-* Comments changed by dartdoc comments.
+* Comments replaced by dartdoc comments.
