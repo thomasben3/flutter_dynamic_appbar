@@ -1,7 +1,7 @@
 name: dynamic_appbar
 description: "A flutter dynamic appbar package."
-version: 0.0.1
-homepage:
+version: 1.0.0
+homepage: https://github.com/thomasben3/flutter_dynamic_appbar
 
 environment:
   sdk: '>=3.4.1 <4.0.0'

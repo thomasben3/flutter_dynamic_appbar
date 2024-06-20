@@ -11,20 +11,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Dynamic AppBar Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
+  const MyHomePage({super.key});
 
   static const double _appBarHeight = 60;
 
@@ -32,13 +30,22 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: DynamicAppBarView(
-        title: const Text('Dynamic AppBar', style: TextStyle(color: Colors.white, fontSize: 23)),
+        title: const Text(
+          'Dynamic AppBar',
+          style: TextStyle(color: Colors.white, fontSize: 23)
+        ),
         appBarHeight: _appBarHeight,
         appBarColor: Colors.blue,
-        leftButton: const Icon(Icons.star, color: Colors.white),
+        leftButton: const Icon(
+          Icons.star,
+          color: Colors.white
+        ),
         rightButton: IconButton(
           onPressed: () {/* Triggers function */},
-          icon: const Icon(Icons.menu, color: Colors.white)
+          icon: const Icon(
+            Icons.menu,
+            color: Colors.white
+          )
         ),
         child: ListView.builder(
           padding: const EdgeInsets.only(top: _appBarHeight),

@@ -12,7 +12,6 @@ class DynamicAppBarView extends StatelessWidget {
     this.rightButton,
     this.appBarHeight = 50,
     this.appBarColor = Colors.white,
-    this.appBarShadows,
     required this.child
   });
 
@@ -21,7 +20,6 @@ class DynamicAppBarView extends StatelessWidget {
   final Widget?                   rightButton;
   final double                    appBarHeight;
   final Color?                    appBarColor;
-  final List<BoxShadow>?          appBarShadows;
   final Widget                    child;
 
 
@@ -55,8 +53,7 @@ class DynamicAppBarView extends StatelessWidget {
                       leftButton: leftButton,
                       rightButton: rightButton,
                       appBarColor: appBarColor,
-                      appBarHeight: appBarHeight,
-                      appBarShadows: appBarShadows
+                      appBarHeight: appBarHeight
                     )
                   ],
                 );

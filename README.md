@@ -1,39 +1,73 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Dynamic AppBar for Flutter
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+The Dynamic AppBar for Flutter enhances user experience by dynamically hiding the app bar when scrolling down and reappearing when scrolling up. It offers customizable features such as dynamic title, left and right buttons, and adjustable height and color options, making it a versatile solution for navigation in Flutter applications.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- Automatically hides the app bar when scrolling down
+- Reappears the app bar when scrolling up
+- Customizable title, left and right buttons
+- Adjustable app bar height and color
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+To use this package, add `dynamic_appbar` as a dependency in your `pubspec.yaml` file:
+
+```yaml
+dependencies:
+  dynamic_appbar: ^1.0.0
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+Here's a basic example of how to use the DynamicAppBarView:
 
 ```dart
-const like = 'sample';
+import 'package:flutter/material.dart';
+import 'package:dynamic_appbar/dynamic_appbar.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: DynamicAppBarView(
+          title: Text('My App'),
+          leftButton: IconButton(
+            icon: Icon(Icons.menu),
+            onPressed: () {
+              // Handle menu button press
+            },
+          ),
+          rightButton: IconButton(
+            icon: Icon(Icons.settings),
+            onPressed: () {
+              // Handle settings button press
+            },
+          ),
+          child: ListView.builder(
+            itemCount: 50,
+            itemBuilder: (context, index) {
+              return ListTile(
+                title: Text('Item $index'),
+              );
+            },
+          ),
+        ),
+      ),
+    );
+  }
+}
 ```
 
-## Additional information
+## Contributing
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+Contributions are welcome! If you find a bug or have a feature request, please [open an issue](https://github.com/thomasben3/flutter_dynamic_appbar/issues) on the GitHub repository. Pull requests are also welcome.
+
+## License
+
+This project is licensed under the 3-Clause BSD License. See the [LICENSE](https://github.com/thomasben3/flutter_dynamic_appbar/blob/main/LICENSE) file for more information.
