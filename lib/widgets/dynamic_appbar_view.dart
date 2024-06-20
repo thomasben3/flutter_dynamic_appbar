@@ -52,11 +52,13 @@ class DynamicAppBarView extends StatelessWidget {
             // Return the Stack with the child and the _DynamicAppBar
             return Stack(
               children: [
+                // This Positioned.fill is the parent of the child widget
                 Positioned.fill(
                     child: NotificationListener<ScrollNotification>(
                         onNotification: (notification) =>
                             model.onScrollNotification(context, notification),
                         child: child)),
+                // This is the appbar widget
                 _DynamicAppBar(
                     title: title,
                     leftButton: leftButton,

@@ -31,8 +31,8 @@ class _DynamicAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Return the AnimatedPositioned widget that will animate the appbar when it appears or disappears
-    // The value of top will be 0 if the appbar is visible, and -appBarHeight if it is not, this will make the appbar to appear or disappear
     return AnimatedPositioned(
+      // The value of top will be 0 if the appbar is visible, and -appBarHeight if it is not, this will make the appbar to appear or disappear
       top: _DynamicAppBarProvider.of(context).isVisible ? 0 : -appBarHeight,
       left: 0,
       right: 0,

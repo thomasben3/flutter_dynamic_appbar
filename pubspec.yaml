@@ -1,6 +1,6 @@
 name: dynamic_appbar
 description: "A Flutter package for a dynamic app bar that hides and shows based on scroll position, with customizable options."
-version: 1.0.1
+version: 1.0.2
 homepage: https://github.com/thomasben3/flutter_dynamic_appbar
 
 environment:
