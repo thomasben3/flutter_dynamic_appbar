@@ -58,6 +58,7 @@ class DynamicAppBarView extends StatelessWidget {
                         onNotification: (notification) =>
                             model.onScrollNotification(context, notification),
                         child: child)),
+
                 /// This is the appbar widget
                 _DynamicAppBar(
                     title: title,
