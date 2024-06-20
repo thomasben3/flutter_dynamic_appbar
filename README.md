@@ -17,7 +17,7 @@ To use this package, add `dynamic_appbar` as a dependency in your `pubspec.yaml`
 
 ```yaml
 dependencies:
-  dynamic_appbar: ^1.0.3
+  dynamic_appbar: ^1.0.4
 ```
 
 ## Usage

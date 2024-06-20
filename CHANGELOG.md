@@ -24,3 +24,9 @@
 ### Fixed
 
 * Comments replaced by dartdoc comments.
+
+## 1.0.4
+
+### Fixed
+
+* Code formatted following dart conventions.
