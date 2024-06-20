@@ -2,6 +2,8 @@
 
 The Dynamic AppBar for Flutter enhances user experience by dynamically hiding the app bar when scrolling down and reappearing when scrolling up. It offers customizable features such as dynamic title, left and right buttons, and adjustable height and color options, making it a versatile solution for navigation in Flutter applications.
 
+![](https://github.com/thomasben3/flutter_dynamic_appbar/blob/main/demo.gif)
+
 ## Features
 
 - Automatically hides the app bar when scrolling down
