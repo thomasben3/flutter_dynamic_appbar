@@ -12,3 +12,9 @@
 
 * Code formatted following dart conventions.
 * Larger description of the package in the pubspec.yaml.
+
+## 1.0.2
+
+### Fixed
+
+* Comments added in example/lib/main.dart
