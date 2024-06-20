@@ -15,6 +15,12 @@
 
 ## 1.0.2
 
+### Added
+
+* Comments added in example/lib/main.dart.
+
+## 1.0.3
+
 ### Fixed
 
-* Comments added in example/lib/main.dart
+* Comments changed by dartdoc comments.

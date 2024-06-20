@@ -7,11 +7,11 @@ part of '../dynamic_appbar.dart';
 class _DynamicAppBarProvider extends InheritedNotifier<_DynamicAppBarModel> {
   final _DynamicAppBarModel model;
 
-  // Constructor
+  /// Constructor
   const _DynamicAppBarProvider({required this.model, required super.child})
       : super(notifier: model);
 
-  // This method is used to access the closest _DynamicAppBarModel of the closest parent _DynamicAppBarProvider
+  /// This method is used to access the closest _DynamicAppBarModel of the closest parent _DynamicAppBarProvider
   static _DynamicAppBarModel of(BuildContext context) {
     return context
         .dependOnInheritedWidgetOfExactType<_DynamicAppBarProvider>()!
